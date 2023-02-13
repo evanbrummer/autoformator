@@ -74,7 +74,7 @@ int main()
     printf("[%s]  [%s]  [%s]  [%s]\n", pos1,pos2,pos3,pos4);
     printf("         [%s]\n\n", pos0);
     
-    
+    scanf("%s");
     fclose(fp);
     printf("// GLHF //");
     return 0;

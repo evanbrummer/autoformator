@@ -2,23 +2,17 @@
 #include <stdlib.h>
 #include <string.h>
 
-//STRUCTS
-struct playerInfo_struct {
-    int strength[7];
-    char init[2];
-    int canSub;
-    int onField;
-} playerInfo_struct;
+#include "PlayerInfo.h"
 
 //PROTOTYPES
-char *find(int num, struct playerInfo_struct *players);
+char *find(int num, struct player_info *players);
 
 //MAIN
 int main()
 {
     printf("// EVAN'S AUTO-FORMATOR //\n");
     
-    struct playerInfo_struct player[18];
+    struct player_info player[18];
     
     FILE* fp;
     printf("Loading Players");
@@ -81,7 +75,7 @@ int main()
 }
 
 // 0-GK, 1-OB, 2-CB, 3-DM, 4-WG, 5-CM, 6-FW
-char *find(int num, struct playerInfo_struct *player) {
+char *find(int num, struct player_info *player) {
     char *name;
     name = (char*)malloc(2 * sizeof(char));
     

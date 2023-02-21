@@ -5,7 +5,7 @@
 #include "Find.h"
 #include "Formation.h"
 #include "LoadPlayers.h"
-#include "PlayerInfo.h"
+//#include "PlayerInfo.h"
 
 
 //MAIN
@@ -13,7 +13,8 @@ int main()
 {
     printf("// EVAN'S AUTO-FORMATOR //\n");
     
-    struct playerInfo player[] = loadPlayers();
+    struct playerInfo *player[] = malloc(sizeof(struct playerInfo) * 18);
+    *player = loadPlayers(18);
 
     printRoster();
     promptUpdatePlayers();
